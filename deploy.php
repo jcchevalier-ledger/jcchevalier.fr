@@ -28,9 +28,19 @@ host('jcchevalier.fr')
 
 // Tasks
 
-task('build', function () {
-    run('cd {{release_path}} && build');
+task('npm:install', function () {
+    run('cd {{release_path}} && npm install');
 });
+
+task('npm:run', function () {
+    run('cd {{release_path}} && npm run production');
+});
+
+task('yolo', [
+    'deploy',
+    'npm:install',
+    'npm:run',
+]);
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
