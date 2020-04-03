@@ -1,6 +1,8 @@
 const regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const button = document.getElementById('form-button');
-
+const bodyMessage = document.getElementById('bmessage');
+const email = document.getElementById('email');
+const invalidFeedback = document.getElementById('invalid-feedback-email');
 
 button.addEventListener("click", function () {
 
@@ -25,25 +27,22 @@ button.addEventListener("click", function () {
             $(".collapse").collapse("hide");
             button.innerHTML = 'Contact me';
             $("#thank-you").modal("show");
-            document.getElementById('email').classList.remove('valid-input');
-            document.getElementById('bmessage').classList.remove('valid-input');
+            email.classList.remove('valid-input');
+            bodyMessage.classList.remove('valid-input');
         }
     }
 });
-
 
 document.form1.email.addEventListener('keyup', function () {
 
     activate_button();
 
     if (!regExp.test(document.form1.email.value)) {
-        document.getElementById('invalid-feedback-email').innerHTML = 'Please fill out this field with an email address';
-        document.getElementById('email').classList.add('invalid-input');
-        document.getElementById('email').classList.remove('valid-input');
+        invalidFeedback.innerHTML = 'Please fill out this field with an email address';
+        invalidInput(email);
     } else {
-        document.getElementById('invalid-feedback-email').innerHTML = '';
-        document.getElementById('email').classList.add('valid-input');
-        document.getElementById('email').classList.remove('invalid-input');
+        invalidFeedback.innerHTML = '';
+        validInput(email);
     }
 });
 
@@ -53,17 +52,15 @@ document.form1.email.addEventListener('blur', function () {
     activate_button();
 
     if ((document.form1.email.value === "") || (!regExp.test(document.form1.email.value))) {
-        document.getElementById('invalid-feedback-email').innerHTML = 'Please fill out this field with an email address';
-        document.getElementById('email').classList.add('invalid-input');
-        document.getElementById('email').classList.remove('valid-input');
+        invalidFeedback.innerHTML = 'Please fill out this field with an email address';
+        invalidInput(email);
         button.classList.add("disabled");
         button.setAttribute("title", "The required fields are incomplete");
 
     }
     if (regExp.test(document.form1.email.value)) {
-        document.getElementById('invalid-feedback-email').innerHTML = '';
-        document.getElementById('email').classList.add('valid-input');
-        document.getElementById('email').classList.remove('invalid-input');
+        invalidFeedback.innerHTML = '';
+        validInput(email)
     }
 });
 
@@ -74,14 +71,12 @@ document.form1.bmessage.addEventListener('blur', function () {
 
     if (document.form1.bmessage.value === '') {
         document.getElementById('invalid-feedback-message').innerHTML = 'Please fill out this field';
-        document.getElementById('bmessage').classList.add('invalid-input');
-        document.getElementById('bmessage').classList.remove('valid-input');
+        invalidInput(bodyMessage);
         button.classList.add("disabled");
         button.setAttribute("title", "The required fields are incomplete");
     } else {
         document.getElementById('invalid-feedback-message').innerHTML = '';
-        document.getElementById('bmessage').classList.add('valid-input');
-        document.getElementById('bmessage').classList.remove('invalid-input');
+        validInput(bodyMessage)
     }
 });
 
@@ -115,3 +110,13 @@ document.addEventListener('keydown', function (event) {
         $("#thank-you").modal("hide");
     }
 });
+
+function invalidInput(item) {
+    item.classList.add('invalid-input');
+    item.classList.remove('valid-input');
+}
+
+function validInput(item) {
+    item.classList.add('valid-input');
+    item.classList.remove('invalid-input');
+}
