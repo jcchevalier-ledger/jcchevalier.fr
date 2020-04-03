@@ -8,6 +8,7 @@ button.addEventListener("click", function () {
 
     if (button.classList.contains("contact-me")) {
         $(".collapse").collapse("show");
+        window.location.hash = '#contact-me';
         button.innerHTML = 'Send !';
         button.classList.remove("contact-me");
         button.classList.add("send");
