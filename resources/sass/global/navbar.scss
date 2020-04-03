@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #ecf0f1;
+}
+
+.nav-link {
+    padding: 0;
+
+    .active {
+        background-color: darkgray;
+        border-radius: 10px;
+    }
+}
