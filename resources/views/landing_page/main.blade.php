@@ -425,7 +425,6 @@
 @endsection
 
 @section('end_scripts')
-    <script src="{{ mix('/js/app.js') }}"></script>
     <script src="{{ mix('/js/landing_page.js') }}"></script>
     <script src="{{ mix('/js/navbar.js') }}"></script>
 @endsection
