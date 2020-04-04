@@ -33,10 +33,14 @@ button.addEventListener("click", function () {
                 if (!(errorMessage.body == null)) {
                     invalidFeedbackBody.innerHTML = errorMessage.body;
                     invalidInput(bodyMessage);
+                } else {
+                    validInput(bodyMessage);
                 }
                 if (!(errorMessage.email == null)) {
                     invalidFeedbackEmail.innerHTML = errorMessage.email;
                     invalidInput(email);
+                } else {
+                    validInput(email);
                 }
             });
     }
