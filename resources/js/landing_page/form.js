@@ -1,6 +1,6 @@
 const regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const button = document.getElementById('form-button');
-const bodyMessage = document.getElementById('bmessage');
+const bodyMessage = document.getElementById('body');
 const email = document.getElementById('email');
 const invalidFeedback = document.getElementById('invalid-feedback-email');
 
@@ -17,10 +17,10 @@ button.addEventListener("click", function () {
         // noinspection JSUnresolvedFunction
         $('[data-toggle="tooltip"]').tooltip();
     } else if (button.classList.contains("send")) {
-        if ((regExp.test(document.form1.email.value)) && !(document.form1.bmessage.value === '')) {
+        if ((regExp.test(document.form1.email.value)) && !(document.form1.body.value === '')) {
             $.post("css_js/contact_me.php", {
                 email: document.form1.email.value,
-                bmessage: document.form1.bmessage.value
+                body: document.form1.body.value
             });
             document.form1.reset();
             button.classList.add("contact-me");
@@ -66,11 +66,11 @@ document.form1.email.addEventListener('blur', function () {
 });
 
 
-document.form1.bmessage.addEventListener('blur', function () {
+document.form1.body.addEventListener('blur', function () {
 
     activate_button();
 
-    if (document.form1.bmessage.value === '') {
+    if (document.form1.body.value === '') {
         document.getElementById('invalid-feedback-message').innerHTML = 'Please fill out this field';
         invalidInput(bodyMessage);
         button.classList.add("disabled");
@@ -81,13 +81,13 @@ document.form1.bmessage.addEventListener('blur', function () {
     }
 });
 
-document.form1.bmessage.addEventListener('keyup', function () {
+document.form1.body.addEventListener('keyup', function () {
     activate_button();
 });
 
 
 function activate_button() {
-    if ((regExp.test(document.form1.email.value)) && !(document.form1.bmessage.value === '')) {
+    if ((regExp.test(document.form1.email.value)) && !(document.form1.body.value === '')) {
         button.classList.remove("disabled");
         button.setAttribute("data-original-title", "");
         button.setAttribute("title", "");

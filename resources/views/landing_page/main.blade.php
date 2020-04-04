@@ -383,8 +383,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="bmessage"></label>
-                            <input class="form-control" id="bmessage" name="bmessage"
+                            <label for="body"></label>
+                            <input class="form-control" id="body" name="body"
                                    placeholder="Your message goes here"
                                    required type="text"/>
                             <div id="invalid-feedback-message"></div>

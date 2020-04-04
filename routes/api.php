@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/user', 'GetUser');
+
+Route::post('/contact_me', 'LandingPage@contactForm');
