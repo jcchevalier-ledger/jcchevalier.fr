@@ -297,7 +297,7 @@
                     This one had been entrusted to M-GaTE in 2018, and it quickly became problematic and fell behind. I
                     took
                     over this project a year after it started, with a dissatisfied customer. <strong
-                        class="white-on-black">Through
+                            class="white-on-black">Through
                         regular contact</strong> and <strong class="white-on-black">full renegotiation of the terms of
                         the
                         contract</strong>, the project is now completed, and the client is fully satisfied by our
@@ -327,8 +327,8 @@
                     and <strong class="white-on-black">I took care of the entire server part</strong>. I was able to
                     develop
                     technical skills in <strong class="white-on-black">backend programming</strong> and <strong
-                        class="white-on-black">database management</strong>, while establishing various <strong
-                        class="white-on-black">security layers</strong>.
+                            class="white-on-black">database management</strong>, while establishing various <strong
+                            class="white-on-black">security layers</strong>.
                 </p>
 
                 <div class="jumbotron page-header row white-on-black">
