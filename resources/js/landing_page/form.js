@@ -14,6 +14,7 @@ button.addEventListener("click", function () {
         button.classList.remove("contact-me");
         button.classList.add("send");
     } else if (button.classList.contains("send")) {
+        removePreviousResults();
         $.post(
             "api/contact_me",
             {
@@ -26,8 +27,6 @@ button.addEventListener("click", function () {
                 $(".collapse").collapse("hide");
                 button.innerHTML = 'Contact me';
                 $("#thank-you").modal("show");
-                email.classList.remove('valid-input');
-                bodyMessage.classList.remove('valid-input');
             })
             .fail(function (xhr) {
                 const errorMessage = JSON.parse(xhr.responseText);
@@ -65,4 +64,13 @@ function invalidInput(item) {
 function validInput(item) {
     item.classList.add('valid-input');
     item.classList.remove('invalid-input');
+}
+
+function removePreviousResults() {
+    email.classList.remove('invalid-input');
+    email.classList.remove('valid-input');
+    bodyMessage.classList.remove('invalid-input');
+    bodyMessage.classList.remove('valid-input');
+    invalidFeedbackBody.innerHTML = "";
+    invalidFeedbackEmail.innerHTML = "";
 }
