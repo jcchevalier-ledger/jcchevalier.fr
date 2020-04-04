@@ -2,7 +2,8 @@ const regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const button = document.getElementById('form-button');
 const bodyMessage = document.getElementById('body');
 const email = document.getElementById('email');
-const invalidFeedback = document.getElementById('invalid-feedback-email');
+const invalidFeedbackEmail = document.getElementById('invalid-feedback-email');
+const invalidFeedbackBody = document.getElementById('invalid-feedback-message');
 
 button.addEventListener("click", function () {
 
@@ -12,91 +13,35 @@ button.addEventListener("click", function () {
         button.innerHTML = 'Send !';
         button.classList.remove("contact-me");
         button.classList.add("send");
-        button.classList.add("disabled");
-        button.setAttribute("data-original-title", "The required fields are incomplete");
-        // noinspection JSUnresolvedFunction
-        $('[data-toggle="tooltip"]').tooltip();
     } else if (button.classList.contains("send")) {
-        if ((regExp.test(document.form1.email.value)) && !(document.form1.body.value === '')) {
-            $.post("css_js/contact_me.php", {
+        $.post(
+            "api/contact_me",
+            {
                 email: document.form1.email.value,
                 body: document.form1.body.value
+            }, function () {
+                document.form1.reset();
+                button.classList.add("contact-me");
+                button.classList.remove("send");
+                $(".collapse").collapse("hide");
+                button.innerHTML = 'Contact me';
+                $("#thank-you").modal("show");
+                email.classList.remove('valid-input');
+                bodyMessage.classList.remove('valid-input');
+            })
+            .fail(function (xhr) {
+                const errorMessage = JSON.parse(xhr.responseText);
+                if (!(errorMessage.body == null)) {
+                    invalidFeedbackBody.innerHTML = errorMessage.body;
+                    invalidInput(bodyMessage);
+                }
+                if (!(errorMessage.email == null)) {
+                    invalidFeedbackEmail.innerHTML = errorMessage.email;
+                    invalidInput(email);
+                }
             });
-            document.form1.reset();
-            button.classList.add("contact-me");
-            button.classList.remove("send");
-            $(".collapse").collapse("hide");
-            button.innerHTML = 'Contact me';
-            $("#thank-you").modal("show");
-            email.classList.remove('valid-input');
-            bodyMessage.classList.remove('valid-input');
-        }
     }
 });
-
-document.form1.email.addEventListener('keyup', function () {
-
-    activate_button();
-
-    if (!regExp.test(document.form1.email.value)) {
-        invalidFeedback.innerHTML = 'Please fill out this field with an email address';
-        invalidInput(email);
-    } else {
-        invalidFeedback.innerHTML = '';
-        validInput(email);
-    }
-});
-
-
-document.form1.email.addEventListener('blur', function () {
-
-    activate_button();
-
-    if ((document.form1.email.value === "") || (!regExp.test(document.form1.email.value))) {
-        invalidFeedback.innerHTML = 'Please fill out this field with an email address';
-        invalidInput(email);
-        button.classList.add("disabled");
-        button.setAttribute("title", "The required fields are incomplete");
-
-    }
-    if (regExp.test(document.form1.email.value)) {
-        invalidFeedback.innerHTML = '';
-        validInput(email)
-    }
-});
-
-
-document.form1.body.addEventListener('blur', function () {
-
-    activate_button();
-
-    if (document.form1.body.value === '') {
-        document.getElementById('invalid-feedback-message').innerHTML = 'Please fill out this field';
-        invalidInput(bodyMessage);
-        button.classList.add("disabled");
-        button.setAttribute("title", "The required fields are incomplete");
-    } else {
-        document.getElementById('invalid-feedback-message').innerHTML = '';
-        validInput(bodyMessage)
-    }
-});
-
-document.form1.body.addEventListener('keyup', function () {
-    activate_button();
-});
-
-
-function activate_button() {
-    if ((regExp.test(document.form1.email.value)) && !(document.form1.body.value === '')) {
-        button.classList.remove("disabled");
-        button.setAttribute("data-original-title", "");
-        button.setAttribute("title", "");
-
-    } else {
-        button.classList.add("disabled");
-        button.setAttribute("data-original-title", "The required fields are incomplete");
-    }
-}
 
 document.addEventListener('keydown', function (event) {
 
