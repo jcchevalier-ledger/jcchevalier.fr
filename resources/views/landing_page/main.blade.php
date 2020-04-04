@@ -143,7 +143,7 @@
 
                     <div class="row skills">
                         <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/C++ icon.png') }}">
+                            <img alt="" class="logo img-fluid" src="{{ asset('/images/Cpp icon.png') }}">
                         </div>
                         <div class="col skills">
                             <div class="progress">
