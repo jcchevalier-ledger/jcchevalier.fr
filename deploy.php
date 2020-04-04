@@ -28,19 +28,30 @@ host('jcchevalier.fr')
 
 // Tasks
 
-task('npm:install', function () {
-    run('cd {{release_path}} && && rm -rf node_modules public/css public/js public/images public/mix-manifest.json && npm install');
-});
-
-task('npm:run', function () {
-    run('cd {{release_path}} && npm run production');
-});
-
-task('yolo', [
-    'deploy',
+task(
     'npm:install',
+    function () {
+        run(
+            'cd {{release_path}} && rm -rf node_modules public/css public/js public/images public/mix-manifest.json && npm install'
+        );
+    }
+);
+
+task(
     'npm:run',
-]);
+    function () {
+        run('cd {{release_path}} && npm run production');
+    }
+);
+
+task(
+    'yolo',
+    [
+        'deploy',
+        'npm:install',
+        'npm:run',
+    ]
+);
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
