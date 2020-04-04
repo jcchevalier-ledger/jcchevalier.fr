@@ -114,3 +114,4 @@ modules.xml
 /public/js/
 /public/images/
 /public/mix-manifest.json
+/tests/APITesting/environment/rest-client.private.env.json
