@@ -40,5 +40,7 @@ class LandingPage extends Controller
             return response()->json($errors, 400);
         }
 
+        return response()->json("Thanks for submitting your message", 200);
+
     }
 }
