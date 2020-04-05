@@ -8,6 +8,6 @@ Content-Disposition: form-data; name="email"
 --WebAppBoundary--
 Content-Disposition: form-data; name="body"
 
-{{lorem_ipsum}}"
+{{lorem_ipsum}}
 
 ###

@@ -42,7 +42,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_CONTACT'))
+        return $this->from(config('mail.from.address'))
                     ->subject('Someone contacted you !')
                     ->replyTo($this->sender)
                     ->view('emails.contact')

@@ -40,7 +40,7 @@ class LandingPage extends Controller
             return response()->json($request->errors, 400);
         }
     
-        Mail::to(env("MAIL_ADMIN"))
+        Mail::to(config('mail.me'))
             ->send(
                 new ContactMail(
                     $request->validated()
