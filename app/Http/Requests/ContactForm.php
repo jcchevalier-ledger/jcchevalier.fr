@@ -12,12 +12,12 @@ use Illuminate\Foundation\Http\FormRequest;
  */
 class ContactForm extends FormRequest
 {
-
+    
     /**
      * @var null
      */
     public $errors = null;
-
+    
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -27,7 +27,7 @@ class ContactForm extends FormRequest
     {
         return true;
     }
-
+    
     /**
      * Get the validation rules that apply to the request.
      *
@@ -40,7 +40,7 @@ class ContactForm extends FormRequest
             'body' => 'required|max:2000',
         ];
     }
-
+    
     /**
      * @return array
      */
@@ -51,7 +51,7 @@ class ContactForm extends FormRequest
             'body' => 'message',
         ];
     }
-
+    
     /**
      * @return array
      */
@@ -61,7 +61,7 @@ class ContactForm extends FormRequest
             'required' => 'A valid :attribute is required',
         ];
     }
-
+    
     /**
      * @param Validator $validator
      * @return void

@@ -19,4 +19,5 @@ Artisan::command(
     function () {
         $this->comment(Inspiring::quote());
     }
-)->describe('Display an inspiring quote');
+)
+       ->describe('Display an inspiring quote');
