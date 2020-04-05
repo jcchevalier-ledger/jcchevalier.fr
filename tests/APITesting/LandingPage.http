@@ -1,4 +1,4 @@
-POST http://{{host}}/api/contact_me
+POST {{protocol}}{{host}}/api/contact_me
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
 --WebAppBoundary

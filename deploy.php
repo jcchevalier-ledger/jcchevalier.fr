@@ -32,7 +32,7 @@ task(
     'npm:install',
     function () {
         run(
-            'cd {{release_path}} && rm -rf node_modules public/css public/js public/images public/mix-manifest.json && npm install'
+            'cd {{release_path}} && npm install'
         );
     }
 );
