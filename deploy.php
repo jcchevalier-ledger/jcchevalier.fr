@@ -44,15 +44,6 @@ task(
     }
 );
 
-task(
-    'yolo',
-    [
-        'deploy',
-        'npm:install',
-        'npm:run',
-    ]
-);
-
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
