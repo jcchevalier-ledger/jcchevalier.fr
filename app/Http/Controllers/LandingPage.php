@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactForm;
+use App\Mail\ContactMail;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 
 /**
@@ -26,21 +28,26 @@ class LandingPage extends Controller
     {
         return view('landing_page.main');
     }
-
+    
     /**
      * @param ContactForm $request
      * @return JsonResponse
      */
     public function contactForm(ContactForm $request)
     {
-
-        $errors = $request->errors;
-
-        if (isset($errors)) {
-            return response()->json($errors, 400);
+    
+        if (isset($request->errors)) {
+            return response()->json($request->errors, 400);
         }
-
+    
+        Mail::to(env("MAIL_ADMIN"))
+            ->send(
+                new ContactMail(
+                    $request->validated()
+                )
+            );
+    
         return response()->json("Thanks for submitting your message", 200);
-
+    
     }
 }
