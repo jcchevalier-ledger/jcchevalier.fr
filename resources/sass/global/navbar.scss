@@ -2,11 +2,18 @@
   background-color: #ecf0f1;
 }
 
+.navbar-brand {
+  color: $ucla_blue;
+  font-weight: bolder;
+}
+
 .nav-link {
   padding: 0;
+  color: $lilac_luster;
 
-  .active {
-    background-color: darkgray;
+  &.active {
+    background-color: $ucla_blue;
     border-radius: 10px;
+    color: white;
   }
 }

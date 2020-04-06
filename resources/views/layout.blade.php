@@ -7,7 +7,6 @@
     <meta content="Jean-Christophe Chevalier's resume, Computer Science Student" name="description">
     <meta content="Jean-Christophe Chevalier" name="author">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200|Quicksand" rel="stylesheet">
 
     <link href="{{ asset('images/favicon.png') }}" rel="icon"/>
@@ -26,7 +25,7 @@
     <div id="loader-container">
         <div id="loader">
             <p class="loading">
-            <div class="bounceball"></div>
+            <div class="bounce-ball"></div>
             <div class="text">NOW LOADING<br>Enable Javascript to access this website</div>
         </div>
     </div>
@@ -34,7 +33,7 @@
 
 @yield('overview')
 
-<nav class="navbar navbar-expand navbar-light justify-content-center" id="navbar">
+<nav class="navbar navbar-expand justify-content-center" id="navbar">
     <a class="navbar-brand" href="#">Jean-Christophe Chevalier</a>
     @yield('navbar')
 </nav>

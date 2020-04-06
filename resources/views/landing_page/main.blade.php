@@ -245,8 +245,8 @@
     <div class="background-2 parallax-effect"></div>
 
     <div class="jumbotron-fluid" id="my-experience">
-        <h1 class="display-4 white-on-black">My experience</h1>
-        <p class="my-5 white-on-black">
+        <h1 class="display-4">My experience</h1>
+        <p class="my-5">
             During my training, I had the opportunity to participate in projects proposed by professionals, but also to
             get involved in a university association with a pedagogical aim.
         </p>
@@ -254,10 +254,10 @@
         <div class="row">
 
             <div class="col-sm-6">
-                <h2 class="display-5 white-on-black">Extra-curricular activities</h2>
+                <h2 class="display-5">Extra-curricular activities</h2>
                 <hr>
 
-                <div class="jumbotron page-header row white-on-black">
+                <div class="jumbotron page-header row">
                     <h5 class="col title">March 2018 - February 2019
                         <hr>
                         M-GaTE Junior-Entreprise
@@ -268,37 +268,37 @@
                 </div>
 
                 <p>
-                    A <strong class="white-on-black">Junior Enterprise</strong> is a non-profit association, managed by
-                    students. Its purpose is to <strong class="white-on-black">provide services</strong> to businesses
+                    A <strong>Junior Enterprise</strong> is a non-profit association, managed by
+                    students. Its purpose is to <strong>provide services</strong> to businesses
                     and
                     individuals, in a similar way to real companies. The main goal of these structures is to enhance the
-                    learning of their members <strong class="white-on-black">through practical experience</strong>.
+                    learning of their members <strong>through practical experience</strong>.
                     M-GaTE
                     offers its services in the fields of software and hardware development.
                 </p>
-                <h4 class="white-on-black">Communication manager</h4>
+                <h4>Communication manager</h4>
                 <p>
                     After a selective recruitment, I took over the position of Communication Manager of M-GaTE. I was in
-                    charge of <strong class="white-on-black">ensuring the visibility and the perks</strong> of the
+                    charge of <strong>ensuring the visibility and the perks</strong> of the
                     Junior-Enterprise on
-                    the various social networks, while <strong class="white-on-black">keeping the communication supports
+                    the various social networks, while <strong>keeping the communication supports
                         up
-                        to date</strong> and <strong class="white-on-black">proposing new ones</strong>. During my term
+                        to date</strong> and <strong>proposing new ones</strong>. During my term
                     of
-                    office, <strong class="white-on-black">I carried out two main projects</strong>:
+                    office, <strong>I carried out two main projects</strong>:
                 </p>
                 <ul>
                     <li>Supervision of the production of an advertising video</li>
                     <li>Realization of a descriptive brochure</li>
                 </ul>
-                <h4 class="white-on-black">Project manager</h4>
+                <h4>Project manager</h4>
                 <p>
-                    I also <strong class="white-on-black">managed the realization of a web-development project</strong>.
+                    I also <strong>managed the realization of a web-development project</strong>.
                     This one had been entrusted to M-GaTE in 2018, and it quickly became problematic and fell behind. I
                     took
                     over this project a year after it started, with a dissatisfied customer. <strong
-                            class="white-on-black">Through
-                        regular contact</strong> and <strong class="white-on-black">full renegotiation of the terms of
+                    >Through
+                        regular contact</strong> and <strong>full renegotiation of the terms of
                         the
                         contract</strong>, the project is now completed, and the client is fully satisfied by our
                     deliverable .
@@ -306,10 +306,10 @@
             </div>
 
             <div class="col-sm-6">
-                <h2 class="display-5 white-on-black">Led projects</h2>
+                <h2 class="display-5">Led projects</h2>
                 <hr>
 
-                <div class="jumbotron page-header row white-on-black">
+                <div class="jumbotron page-header row">
                     <h5 class="col title">February 2019 - June 2019
                         <hr>
                         Pedagogical demonstrator of a cryptographic protocol
@@ -324,14 +324,14 @@
                     developed
                     by the customer. I was attached to the team in charge of this project during its implementation
                     phase,
-                    and <strong class="white-on-black">I took care of the entire server part</strong>. I was able to
+                    and <strong>I took care of the entire server part</strong>. I was able to
                     develop
-                    technical skills in <strong class="white-on-black">backend programming</strong> and <strong
-                            class="white-on-black">database management</strong>, while establishing various <strong
-                            class="white-on-black">security layers</strong>.
+                    technical skills in <strong>backend programming</strong> and <strong
+                    >database management</strong>, while establishing various <strong
+                    >security layers</strong>.
                 </p>
 
-                <div class="jumbotron page-header row white-on-black">
+                <div class="jumbotron page-header row">
                     <h5 class="col title">September 2018 - January 2019
                         <hr>
                         Elaboration of a self-healing battery
@@ -342,12 +342,12 @@
                 </div>
 
                 <p>
-                    In close collaboration with four other students, I had to <strong class="white-on-black">analyze the
-                        client's needs</strong> and <strong class="white-on-black">write precise and exhaustive
-                        specifications</strong> adapted to his request. Subsequently, we <strong class="white-on-black">proposed
+                    In close collaboration with four other students, I had to <strong>analyze the
+                        client's needs</strong> and <strong>write precise and exhaustive
+                        specifications</strong> adapted to his request. Subsequently, we <strong>proposed
                         a methodology that met these specifications</strong>, while researching existing solutions that
                     offered
-                    the same ones. This project allowed me to have a first approach to <strong class="white-on-black">teamwork
+                    the same ones. This project allowed me to have a first approach to <strong>teamwork
                         in order to meet a client's needs</strong>.
                 </p>
             </div>
@@ -365,8 +365,8 @@
                     as soon as possible.
                 </p>
                 <div>
-                    <i class="fa fa-linkedin" id="linked-in"></i>
-                    <i class="fa fa-github" id="github"></i>
+                    <i class="fab fa-linkedin" id="linked-in"></i>
+                    <i class="fab fa-github-square" id="github"></i>
                 </div>
 
                 <hr>
