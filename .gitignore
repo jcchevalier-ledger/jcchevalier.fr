@@ -113,6 +113,7 @@ modules.xml
 /public/css/
 /public/js/
 /public/images/
+/public/fonts/
 /public/mix-manifest.json
 /tests/APITesting/environment/rest-client.private.env.json
 .env.testing
