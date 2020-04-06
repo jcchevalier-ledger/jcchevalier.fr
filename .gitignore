@@ -109,3 +109,11 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/laravel,phpstorm+all
+
+/public/css/
+/public/js/
+/public/images/
+/public/fonts/
+/public/mix-manifest.json
+/tests/APITesting/environment/rest-client.private.env.json
+.env.testing

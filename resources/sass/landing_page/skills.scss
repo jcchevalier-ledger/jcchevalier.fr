@@ -1,0 +1,77 @@
+.logo {
+  max-height: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress {
+  width: 80%;
+  height: 15%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.skills {
+  .col-1, .col, .col-2 {
+    padding: 0;
+    height: 100%;
+  }
+
+  .row {
+    height: 75px;
+    margin: 2% auto;
+  }
+
+  .container-fluid {
+    margin: auto;
+  }
+}
+
+
+h4.title {
+  margin-top: 5%;
+}
+
+.progress-bar {
+  background-color: #1abc9c;
+
+  #C {
+    width: 75%;
+  }
+
+  #Cpp {
+    width: 50%;
+  }
+
+  #HTML_CSS {
+    width: 65%;
+  }
+
+  #java {
+    width: 50%;
+  }
+
+  #php {
+    width: 40%;
+  }
+
+  #python {
+    width: 40%;
+  }
+
+  #ruby {
+    width: 30%;
+  }
+
+  #mariadb {
+    width: 60%;
+  }
+
+  #javascript {
+    width: 40%;
+  }
+}

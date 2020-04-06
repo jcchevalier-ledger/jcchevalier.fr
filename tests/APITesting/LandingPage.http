@@ -1,0 +1,13 @@
+POST {{protocol}}{{host}}/api/contact_me
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+
+{{email}}
+--WebAppBoundary--
+Content-Disposition: form-data; name="body"
+
+{{lorem_ipsum}}
+
+###

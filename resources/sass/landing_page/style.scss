@@ -1,0 +1,283 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+#about-me {
+  color: #34495e;
+  background-color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.parallax-effect {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-1 {
+  height: 100vh;
+}
+
+.background-2 {
+  height: 40vh;
+  background-image: url(computer.jpg);
+  min-height: 40%;
+}
+
+#my-experience {
+  background-color: $ucla_blue;
+  vertical-align: middle;
+  color: white;
+  position: relative;
+  padding: 50px;
+
+  h1 {
+    text-align: center;
+  }
+
+  hr {
+    background-color: white;
+  }
+
+  .jumbotron {
+    color: white;
+    background-color: $ucla_blue;
+  }
+}
+
+.btn-secondary {
+  background-color: $ucla_blue;
+}
+
+.modal {
+  text-align: center;
+  padding: 0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#email {
+  margin: auto;
+  width: auto;
+}
+
+#body {
+  margin: auto;
+  width: 80%;
+  height: 10vh;
+}
+
+#username, #password {
+  width: 25%;
+  margin: auto;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 0;
+  transition: transform .2s;
+  width: 100%;
+  margin: auto;
+
+  img {
+    position: relative;
+    width: 30%;
+    margin: 12% auto 0 auto;
+  }
+}
+
+.achievements {
+  margin: 2%;
+}
+
+.stats {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#intro {
+  position: absolute;
+  text-align: center;
+  background-color: $ucla_blue;
+  color: white;
+  padding: 0;
+  top: 65%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#profile-1 {
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border: grey solid 3px;
+  height: 30vh;
+}
+
+.logo {
+  max-height: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress {
+  width: 80%;
+  height: 15%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.col-1.skills, .col.skills, .col-2.skills {
+  padding: 0;
+  height: 100%;
+}
+
+.row.skills {
+  height: 75px;
+  margin: 2% auto;
+}
+
+h4.title {
+  margin-top: 5%;
+}
+
+.container-fluid.skills {
+  margin: auto;
+}
+
+.progress-bar {
+  background-color: #1abc9c;
+}
+
+#C {
+  width: 75%;
+}
+
+#Cpp {
+  width: 50%;
+}
+
+#HTML_CSS {
+  width: 65%;
+}
+
+#java {
+  width: 50%;
+}
+
+#php, #python {
+  width: 40%;
+}
+
+#ruby {
+  width: 30%;
+}
+
+#mariadb {
+  width: 60%;
+}
+
+#javascript {
+  width: 40%;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  margin: 5px 2px;
+  border-radius: 50%;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+body, html {
+  scroll-behavior: smooth;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(CMP.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p {
+  text-align: justify;
+  line-height: 250%;
+  margin: 2% 0 0;
+  text-indent: 5%;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 5%;
+}
+
+h4 {
+  margin-left: 10%;
+  margin-top: 4%;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 3%;
+  text-align: left;
+  line-height: 250%;
+}
+
+.page-header {
+  text-align: left;
+  margin: 5vh auto auto;
+
+  img {
+    max-height: 100%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.jumbotron {
+    padding: 2% 0;
+  }
+}
+
+.title {
+  margin: auto;
+}
+
+.cutout {
+  text-align: center;
+  text-indent: 0;
+  margin: 0;
+}

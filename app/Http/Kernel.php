@@ -42,7 +42,7 @@ class Kernel extends HttpKernel
         TrimStrings::class,
         ConvertEmptyStringsToNull::class,
     ];
-
+    
     /**
      * The application's route middleware groups.
      *
@@ -58,13 +58,13 @@ class Kernel extends HttpKernel
             VerifyCsrfToken::class,
             SubstituteBindings::class,
         ],
-
+        
         'api' => [
             'throttle:60,1',
             SubstituteBindings::class,
         ],
     ];
-
+    
     /**
      * The application's route middleware.
      *

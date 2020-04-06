@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -12,7 +12,7 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-
+    
     'accepted' => 'The :attribute must be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',
     'after' => 'The :attribute must be a date after :date.',
@@ -117,7 +117,7 @@ return [
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -128,13 +128,13 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
-
+    
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -145,7 +145,7 @@ return [
     | of "email". This simply helps us make our message more expressive.
     |
     */
-
+    
     'attributes' => [],
 
 ];
