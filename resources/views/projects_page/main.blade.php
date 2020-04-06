@@ -19,15 +19,17 @@
 
             <h1>My technicals projects</h1>
             <hr>
-            <p>On this web page, you can interact with my personal projects that have helped me to develop my skills in
-                certain areas of IT</p>
+            <p>On this web page, you can interact with my personal projects that have helped me to acquire some skills
+                in
+                web development</p>
 
             <div class="projects">
 
                 <div class="row">
 
                     <div class="col-sm-6">
-                        <p>Description here</p>
+                        <p>The objective of this project was to code a fully functional login interface. It also
+                            respects GDPR legislation</p>
                         <button type="button" id="login-interface" class="btn btn-outline-success btn-lg">Access the
                             login interface
                         </button>
