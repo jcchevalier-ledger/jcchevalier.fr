@@ -35,7 +35,7 @@
 @yield('overview')
 
 <nav class="navbar navbar-expand justify-content-center" id="navbar">
-    <a class="navbar-brand" href="#">Jean-Christophe Chevalier</a>
+    <a class="navbar-brand" href="/#">Jean-Christophe Chevalier</a>
     @yield('navbar')
 </nav>
 
