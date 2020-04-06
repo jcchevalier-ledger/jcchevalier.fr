@@ -15,6 +15,7 @@
     <link href="{{ mix('/css/global.css') }}" rel="stylesheet"/>
     @yield('additional_css')
 
+    <script src="{{ mix('/js/loading.js') }}"></script>
     <script src="{{ mix('/js/app.js') }}"></script>
     @yield('start_scripts')
 </head>
@@ -40,6 +41,7 @@
 
 @yield('content')
 
+<script src="{{ mix('/js/navbar.js') }}"></script>
 @yield('end_scripts')
 </body>
 

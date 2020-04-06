@@ -6,10 +6,6 @@
     <link href="{{ mix('/css/landing_page.css') }}" rel="stylesheet"/>
 @endsection
 
-@section('start_scripts')
-    <script src="{{ mix('/js/loading.js') }}"></script>
-@endsection
-
 @section('navbar')
     @parent
     <ul class="navbar-nav" style="margin: 0">
@@ -426,6 +422,5 @@
 
 @section('end_scripts')
     <script src="{{ mix('/js/landing_page.js') }}"></script>
-    <script src="{{ mix('/js/navbar.js') }}"></script>
 @endsection
 
