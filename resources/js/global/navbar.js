@@ -2,21 +2,16 @@ const navbar = document.getElementById("navbar");
 const aboutMe = document.getElementById("about-me");
 
 window.onload = function () {
+
     if (aboutMe != null) {
-        window.addEventListener('scroll', function () {
-            add_sticky();
-        });
+        navbar.classList.add("sticky-top");
     } else {
         navbar.classList.add("fixed-top");
     }
-};
 
-
-function add_sticky() {
-
-    if (window.pageYOffset >= aboutMe.offsetTop - navbar.offsetTop) {
-        navbar.classList.add("sticky-top");
-    } else {
-        navbar.classList.remove("sticky-top");
+    if ((document.getElementsByClassName("nav-item").length >= 1) && (window.innerWidth < 760)) {
+        Array.from(document.getElementsByClassName("navbar-brand")).forEach(
+            element => element.style.display = "none"
+        )
     }
-}
+};
