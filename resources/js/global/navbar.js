@@ -1,15 +1,17 @@
-window.onscroll = function () {
-    add_sticky();
-};
-
 const navbar = document.getElementById("navbar");
 const aboutMe = document.getElementById("about-me");
 
-function add_sticky() {
+window.onload = function () {
 
-    if (window.pageYOffset >= aboutMe.offsetTop - navbar.offsetTop) {
+    if (aboutMe != null) {
         navbar.classList.add("sticky-top");
     } else {
-        navbar.classList.remove("sticky-top");
+        navbar.classList.add("fixed-top");
     }
-}
+
+    if ((document.getElementsByClassName("nav-item").length >= 1) && (window.innerWidth < 760)) {
+        Array.from(document.getElementsByClassName("navbar-brand")).forEach(
+            element => element.style.display = "none"
+        )
+    }
+};
