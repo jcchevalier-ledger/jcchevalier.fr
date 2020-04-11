@@ -117,124 +117,7 @@
 
             </div>
 
-            <div class="col-sm-6">
-
-                <h2 class="display-5">My skills</h2>
-                <hr>
-
-                <div class="container-fluid skills">
-
-                    <h4 class="title">General purpose programming</h4>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/java icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="java"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/Cpp icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="Cpp"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/C icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="C"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/python icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="python"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/ruby icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="ruby"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h4 class="title">Web development</h4>
-
-                    <div class="row skills">
-                        <div class="col-1 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/HTML icon.png') }}">
-                        </div>
-                        <div class="col-1 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/CSS icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="HTML_CSS"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/js logo.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="javascript"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h4 class="title">Database management</h4>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/maria db icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="mariadb"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h4 class="title">Backend development</h4>
-
-                    <div class="row skills">
-                        <div class="col-2 skills">
-                            <img alt="" class="logo img-fluid" src="{{ asset('/images/php icon.png') }}">
-                        </div>
-                        <div class="col skills">
-                            <div class="progress">
-                                <div class="progress-bar" id="php"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('landing_page.skills')
         </div>
     </div>
 
@@ -354,7 +237,7 @@
     <div class="background-1" id="contact-me">
         <div class="wrapper form">
             <div class="jumbotron form">
-                <h1>Contact me</h1>
+                <h1 class="display-4">Contact me</h1>
                 <p style="text-align: center">
                     If you are interested in my profile, do not hesitate to contact me via this form, I will answer you
                     back

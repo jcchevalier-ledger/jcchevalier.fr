@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-
 $width: 15px;
 $height: 15px;
 $bounce_height: 30px;
@@ -26,7 +24,7 @@ $background_color: $lilac_luster;
   color: $ball_color;
   display: inline-block;
   margin-left: 5px;
-  font-family: 'Comfortaa', cursive;
+  font-family: $title-font;
 }
 
 .bounce-ball {
