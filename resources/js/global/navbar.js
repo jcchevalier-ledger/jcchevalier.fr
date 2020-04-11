@@ -9,9 +9,32 @@ window.onload = function () {
         navbar.classList.add("fixed-top");
     }
 
-    if ((document.getElementsByClassName("nav-item").length >= 1) && (window.innerWidth < 760)) {
-        Array.from(document.getElementsByClassName("navbar-brand")).forEach(
-            element => element.style.display = "none"
-        )
+    if (responsiveNavbar()) {
+        window.addEventListener('resize', function () {
+            responsiveNavbar();
+        });
     }
 };
+
+function responsiveNavbar() {
+    if (document.getElementsByClassName("nav-item").length >= 1) {
+
+        if (window.innerWidth < 760) {
+            Array.from(document.getElementsByClassName("navbar-brand")).forEach(
+                element => element.setAttribute("style", "display: none")
+            );
+        } else {
+            Array.from(document.getElementsByClassName("navbar-brand")).forEach(
+                element => element.setAttribute("style", "display: visible")
+            );
+        }
+
+        return true;
+    } else if (document.getElementsByClassName("nav-item").length === 0) {
+        Array.from(document.getElementsByClassName("navbar-brand")).forEach(
+            element => element.style.margin = "0"
+        );
+    }
+
+    return false;
+}

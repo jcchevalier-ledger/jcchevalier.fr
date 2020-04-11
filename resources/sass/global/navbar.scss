@@ -2,18 +2,29 @@
   background-color: #ecf0f1;
 }
 
-.navbar-brand {
-  color: $ucla_blue;
-  font-weight: bolder;
-}
+a {
 
-.nav-link {
-  padding: 0;
-  color: $lilac_luster;
+  &.nav-link {
+    padding: 2px;
+    color: $lilac_luster;
 
-  &.active {
-    background-color: $ucla_blue;
-    border-radius: 10px;
-    color: white;
+    &.active {
+      background-color: $ucla_blue;
+      border-radius: 10px;
+      color: white;
+    }
+
+    &:not(.active):hover {
+      color: $ucla_blue;
+      padding-top: 0;
+      transition-duration: 0.1s;
+    }
   }
+
+  &.navbar-brand {
+    color: $ucla_blue;
+    font-weight: bolder;
+    padding: 2px;
+  }
+
 }
