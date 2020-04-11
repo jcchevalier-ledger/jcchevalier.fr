@@ -44,21 +44,11 @@ class ContactForm extends FormRequest
     /**
      * @return array
      */
-    public function attributes()
-    {
-        return [
-            'email' => 'email address',
-            'body' => 'message',
-        ];
-    }
-    
-    /**
-     * @return array
-     */
     public function messages()
     {
         return [
-            'required' => 'A valid :attribute is required',
+            'email.required' => 'A valid email address is required',
+            'body.required' => 'A message is required',
         ];
     }
     
