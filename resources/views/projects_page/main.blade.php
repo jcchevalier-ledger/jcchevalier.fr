@@ -44,3 +44,7 @@
         </div>
     </div>
 @endsection
+
+@section('end_scripts')
+    <script src="{{ mix('/js/projects_page.js') }}"></script>
+@endsection
