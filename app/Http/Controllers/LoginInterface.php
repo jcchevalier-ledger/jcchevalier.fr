@@ -15,7 +15,16 @@ class LoginInterface extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function display(Request $request)
+    public function login(Request $request)
+    {
+        return view('login_page.main');
+    }
+    
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function register(Request $request)
     {
         return view('login_page.main');
     }
