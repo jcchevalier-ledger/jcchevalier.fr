@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'LandingPage@display');
 Route::get('/projects', 'ProjectsPage@display');
+Route::get('/projects/login', 'LoginInterface@display');
