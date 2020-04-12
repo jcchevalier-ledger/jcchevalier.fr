@@ -23,10 +23,9 @@
 
 @section('overview')
     <div class="background-1 parallax-effect">
-        <div class="jumbotron-fluid" id="intro" style="padding: 1%;">
-            <h1 class="display-5 cutout" style="font-size: 3vmax;">Hi I'm Jean-Christophe, and this is my website</h1>
-            <p class="cutout" style="font-size: 1.2vmax;">I am studying Computer Science at Mines
-                Saint-Etienne, a French Graduate Engineering School</p>
+        <div class="jumbotron-fluid" id="intro">
+            <h1 class="display-5">Hi ! I'm Jean-Christophe, and this is my website</h1>
+            <p>Studying CS @Mines Saint-Etienne, a French Engineering School</p>
         </div>
     </div>
 
@@ -40,10 +39,8 @@
         <h1 class="display-4">About me</h1>
         <p class="my-5">
             Currently studying Computer Science at <strong>Mines Saint-Etienne</strong>, a French "Grande Ecole", I am
-            looking for a <strong>6 months end-of-studies internship</strong>, starting April 1st.
-            Naturally curious and interested by new techs, I led some personal projects to get a better overall
-            knowledge on
-            many programming languages, methods and techs.
+            naturally curious and interested by new techs. I led some personal projects to get a better overall
+            knowledge on many programming languages, frameworks & methods.
         </p>
 
         <div class="row">
@@ -67,7 +64,7 @@
                 </p>
                 <ul>
                     <li>Procedural Programming</li>
-                    <li>Oriented Object Programming</li>
+                    <li>Object-oriented Programming</li>
                     <li>Cryptography</li>
                     <li>Database management</li>
                     <li>Networks solutions</li>
@@ -75,30 +72,8 @@
                 <p style="margin: 0">
                     I also had the opportunity to develop some management skills. Thanks to the project-based way of
                     teaching, I acquired notions in <strong>team-working</strong>, <strong>project management</strong>
-                    and
-                    <strong>issues management</strong>.
+                    and <strong>issues management</strong>.
                 </p>
-                <div class="achievements row">
-
-                    <div class="col-md-6 stats">
-                        <div class="card">
-                            <img alt="" class="img-fluid" src="{{ asset('/images/diploma icon.png') }}">
-                            <div class="card-body">
-                                <h5 class="card-title">3.31 GPA</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 stats">
-                        <div class="card">
-                            <img alt="" class="img-fluid" src="{{ asset('/images/earth icon.png') }}">
-                            <div class="card-body">
-                                <h5 class="card-title">2 languages</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="jumbotron page-header row">
                     <h5 class="col title">2015-2017
