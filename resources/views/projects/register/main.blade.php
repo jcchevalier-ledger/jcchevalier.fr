@@ -30,61 +30,36 @@
                 </div>
             @endif
 
-            <form name='login_form' action='' method='post' style="margin: 1em auto 1em auto;">
+            <form name='login_form' action='{{route('register')}}' method='POST' style="margin: 1em auto 1em auto;">
 
                 @csrf
 
-                @if($errors->get('login'))
-                    <div class='form-group invalid-input'>
-                        <label for='login'></label>
-                        <input type='text' id='login' name='login' class='form-control' placeholder='Login'/>
-                    </div>
-                @else
-                    <div class='form-group'>
-                        <label for='login'></label>
-                        <input type='text' id='login' name='login' class='form-control' placeholder='Login'/>
-                    </div>
-                @endif
+                <div class='form-group'>
+                    <label for='login'></label>
+                    <input type='text' id='login' name='login'
+                           class='form-control @error('login') invalid-input @enderror' placeholder='Login'/>
+                </div>
 
-                @if($errors->get('email'))
-                    <div class='form-group invalid-input'>
-                        <label for='email'></label>
-                        <input type='text' id='email' name='email' class='form-control' placeholder='Email address'/>
-                    </div>
-                @else
-                    <div class='form-group'>
-                        <label for='email'></label>
-                        <input type='text' id='email' name='email' class='form-control' placeholder='Email address'/>
-                    </div>
-                @endif
+                <div class='form-group'>
+                    <label for='email'></label>
+                    <input type='text' id='email' name='email'
+                           class='form-control @error("email") invalid-input @enderror'
+                           placeholder='Email address'/>
+                </div>
 
-                @if($errors->get('password'))
-                    <div class='form-group invalid-input'>
-                        <label for='password'></label>
-                        <input type='password' id='password' name='password' class='form-control'
-                               placeholder='Password'/>
-                    </div>
+                <div class='form-group'>
+                    <label for='password'></label>
+                    <input type='password' id='password' name='password'
+                           class='form-control @error("password") invalid-input @enderror'
+                           placeholder='Password'/>
+                </div>
 
-                    <div class='form-group invalid-input'>
-                        <label for='password_confirmation'></label>
-                        <input type='password' id='password_confirmation' name='password_confirmation'
-                               class='form-control'
-                               placeholder='Confirm password'/>
-                    </div>
-                @else
-                    <div class='form-group'>
-                        <label for='password'></label>
-                        <input type='password' id='password' name='password' class='form-control'
-                               placeholder='Password'/>
-                    </div>
-
-                    <div class='form-group'>
-                        <label for='password_confirmation'></label>
-                        <input type='password' id='password_confirmation' name='password_confirmation'
-                               class='form-control'
-                               placeholder='Confirm password'/>
-                    </div>
-                @endif
+                <div class='form-group'>
+                    <label for='password_confirmation'></label>
+                    <input type='password' id='password_confirmation' name='password_confirmation'
+                           class='form-control @error("password") invalid-input @enderror'
+                           placeholder='Confirm password'/>
+                </div>
 
                 <button type='submit' name='submit' id='register-button' class='btn btn-success btn-lg'>
                     Register
