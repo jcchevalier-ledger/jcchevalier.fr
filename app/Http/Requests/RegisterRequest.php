@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\IsFree;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterRequest extends FormRequest
@@ -24,7 +25,7 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'login' => 'required|between:3,14',
+            'login' => ['required', 'between:3,14', new isFree],
             'email' => 'required|email:rfc',
             'password' => 'required|confirmed|regex:#^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])#|between:8,20',
         ];
