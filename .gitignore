@@ -117,3 +117,4 @@ modules.xml
 /public/mix-manifest.json
 /tests/APITesting/environment/rest-client.private.env.json
 .env.testing
+.env.prod
