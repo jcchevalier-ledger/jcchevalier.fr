@@ -4,7 +4,9 @@ namespace App\Http\Controllers\projects;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -19,6 +21,13 @@ class RegisterController extends Controller
     
     public function register(RegisterRequest $request)
     {
+        $validated = $request->validated();
+        $validated['name'] = $validated['login'];
+        unset($validated['login']);
+        $validated['password'] = Hash::make($validated['password']);
+        $newUser = new User($validated);
+        $newUser->save();
+    
         return view('projects.login.main');
     }
     
