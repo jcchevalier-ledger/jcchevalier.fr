@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\projects;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -22,6 +23,6 @@ class ProjectsPage extends Controller
      */
     public function display(Request $request)
     {
-        return view('projects_page.main');
+        return view('projects.main');
     }
 }

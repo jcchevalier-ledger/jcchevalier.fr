@@ -1,3 +1,3 @@
 document.getElementById("login-interface").addEventListener("click", function () {
-    window.open('/projects/login');
+    window.open('/projects/login', '_self');
 });

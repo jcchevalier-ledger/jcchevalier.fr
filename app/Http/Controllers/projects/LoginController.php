@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\projects;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 /**
- * Class LoginInterface
+ * Class LoginController
  *
  * @package App\Http\Controllers
  */
-class LoginInterface extends Controller
+class LoginController extends Controller
 {
     /**
      * @param \Illuminate\Http\Request $request
@@ -17,6 +18,6 @@ class LoginInterface extends Controller
      */
     public function display(Request $request)
     {
-        return view('login_page.main');
+        return view('projects.login.main');
     }
 }

@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'LandingPage@display');
-Route::get('/projects', 'ProjectsPage@display');
-Route::get('/projects/login', 'LoginInterface@display');
+
+Route::get('/projects', 'projects\ProjectsPage@display');
+
+Route::get('/projects/login', 'projects\LoginController@display');
+Route::post('/projects/login', 'projects\LoginController@login')
+     ->name('login');
+
+Route::get('/projects/register', 'projects\RegisterController@display');
+Route::post('/projects/register', 'projects\RegisterController@register')
+     ->name('register');
+
+Route::get('/projects/users/{id}', 'projects\UserController@layout')
+     ->where('id', '[0-9]+')
+     ->name('user')
+     ->middleware('auth');

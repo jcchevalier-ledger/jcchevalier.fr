@@ -105,7 +105,7 @@
             </div>
 
             <div class="col-3">
-                <img class="fab central long" src="{{ asset('/images/jetbrains icon.svg') }}"/>
+                <img class="fab central long" src="{{ asset('/images/logos/jetbrains.svg') }}"/>
             </div>
 
         </div>

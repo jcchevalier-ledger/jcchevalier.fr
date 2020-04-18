@@ -38,9 +38,9 @@
 
             </form>
 
-            <a href='register' target='_self'>
-                <button type='button' id='create-account' class='btn btn-link'>Create account</button>
-            </a>
+            <p style="line-height: initial; text-indent: 0">
+                <a href="/projects/register">Create an account</a>
+            </p>
 
         </div>
     </div>

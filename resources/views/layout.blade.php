@@ -22,15 +22,7 @@
 
 <body data-spy="scroll" data-target="#navbar" style="overflow: hidden;">
 
-@section('loader')
-    <div id="loader-container">
-        <div id="loader">
-            <p class="loading">
-            <div class="bounce-ball"></div>
-            <div class="text">NOW LOADING<br>Enable Javascript to access this website</div>
-        </div>
-    </div>
-@show
+@yield('loader')
 
 @yield('overview')
 

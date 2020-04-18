@@ -10,7 +10,7 @@ use Illuminate\Foundation\Http\FormRequest;
  *
  * @package App\Http\Requests
  */
-class ContactForm extends FormRequest
+class ContactRequest extends FormRequest
 {
     
     /**

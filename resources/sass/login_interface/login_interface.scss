@@ -2,10 +2,6 @@ h1, p, small {
   text-align: center;
 }
 
-hr {
-  background-color: #282E34;
-}
-
 .background-1 {
   background-attachment: fixed;
   background-position: center;
@@ -26,76 +22,9 @@ body:before {
   background: url("../computer-2.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+
   -o-background-size: cover;
   background-size: cover;
-}
-
-.central {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  opacity: 1;
-  padding: 30px;
-}
-
-input, .btn {
-  display: flex;
-  margin: auto;
-}
-
-.navbar {
-  background-color: white;
-}
-
-.nav-link {
-  color: grey;
-}
-
-.nav-link:hover {
-  color: black;
-}
-
-.navbar-brand {
-  font-size: 1rem;
-}
-
-.profile-img {
-  width: 30px;
-  height: 30px;
-}
-
-.big-profile-img {
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-}
-
-#modify {
-  border: none;
-  background: none;
-  opacity: 0.6;
-}
-
-#modify:hover {
-  opacity: 1;
-}
-
-.btn-success {
-  margin-top: 15px
-}
-
-.form-group {
-  display: flex;
-}
-
-label, input {
-  margin: auto;
-}
-
-#password-change {
-  margin-bottom: 5%;
 }
 
 .valid-input {
@@ -108,11 +37,22 @@ label, input {
   background: rgba(191, 63, 63, 0.2);
 }
 
-.title {
-  margin: auto;
+.jumbotron.central {
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+  width: 25vw;
+
+  form {
+    width: 80%;
+    margin: auto;
+  }
 }
 
-.jumbotron.central {
-  padding-bottom: 0;
-  width: auto;
+.form-group {
+  display: flex;
+}
+
+input, .btn {
+  display: flex;
+  margin: auto;
 }
