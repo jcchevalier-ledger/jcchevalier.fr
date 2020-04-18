@@ -20,18 +20,31 @@
             <h1>Login interface</h1>
             <hr>
 
-            <form name='login_form' action='' method='post'>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul style="margin: 5px 0 0 0">
+                        @foreach ($errors->all() as $error)
+                            <li style="margin-bottom: 5px">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form name='login_form' action='{{route('login')}}' method='POST'>
+
+                @csrf
 
                 <div class='form-group'>
                     <label for='login'></label>
-                    <input type='text' id='login' name='login' class='form-control' placeholder='Login' {$login}
-                           required/>
+                    <input type='text' id='login' name='login'
+                           class='form-control @error('login') invalid-input @enderror' placeholder='Login'/>
                 </div>
 
                 <div class='form-group'>
                     <label for='password'></label>
-                    <input type='password' id='password' name='password' class='form-control' placeholder='Password'
-                           required/>
+                    <input type='password' id='password' name='password'
+                           class='form-control @error("password") invalid-input @enderror'
+                           placeholder='Password'/>
                 </div>
 
                 <button type='submit' id='login-button' class='btn btn-success btn-lg'>Login</button>
