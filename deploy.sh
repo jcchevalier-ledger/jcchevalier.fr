@@ -1,7 +1,7 @@
 #!/bin/bash
 # Check presence of .env file
-if [[ ! -f .env ]]; then
-  echo "No .env file found"
+if [[ ! -f .env.prod ]]; then
+  echo "No .env.prod file found"
   exit 1
 fi
 
@@ -9,7 +9,7 @@ host=jisse@jcchevalier.fr
 
 #Copy over SHH the .env file, and create file tree if it does not exist
 ssh $host 'mkdir -p /var/www/jcchevalier.fr/shared/'
-scp .env $host:/var/www/jcchevalier.fr/shared/
+scp .env.prod $host:/var/www/jcchevalier.fr/shared/.env
 
 # Deploy project thanks to deployer
 php vendor/bin/dep deploy

@@ -1,0 +1,58 @@
+h1, p, small {
+  text-align: center;
+}
+
+.background-1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url("../computer-2.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.valid-input {
+  border: green 1px solid;
+  background: rgba(63, 191, 63, 0.2);
+}
+
+.invalid-input {
+  border: red 1px solid;
+  background: rgba(191, 63, 63, 0.2);
+}
+
+.jumbotron.central {
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+  width: 25vw;
+
+  form {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.form-group {
+  display: flex;
+}
+
+input, .btn {
+  display: flex;
+  margin: auto;
+}

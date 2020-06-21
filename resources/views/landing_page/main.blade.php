@@ -6,6 +6,16 @@
     <link href="{{ mix('/css/landing_page.css') }}" rel="stylesheet"/>
 @endsection
 
+@section('loader')
+    <div id="loader-container">
+        <div id="loader">
+            <p class="loading">
+            <div class="bounce-ball"></div>
+            <div class="text">NOW LOADING</div>
+        </div>
+    </div>
+@endsection
+
 @section('navbar')
     @parent
     <ul class="navbar-nav" style="margin: 0">

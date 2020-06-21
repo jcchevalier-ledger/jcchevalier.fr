@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ContactForm;
+use App\Http\Requests\ContactRequest;
 use App\Mail\ContactMail;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\JsonResponse;
@@ -30,24 +30,24 @@ class LandingPage extends Controller
     }
     
     /**
-     * @param ContactForm $request
+     * @param ContactRequest $request
      * @return JsonResponse
      */
-    public function contactForm(ContactForm $request)
+    public function contactForm(ContactRequest $request)
     {
-    
+        
         if (isset($request->errors)) {
             return response()->json($request->errors, 400);
         }
-    
+        
         Mail::to(config('mail.me'))
             ->send(
                 new ContactMail(
                     $request->validated()
                 )
             );
-    
+        
         return response()->json("Thanks for submitting your message", 200);
-    
+        
     }
 }
