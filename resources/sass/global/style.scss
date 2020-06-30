@@ -1,0 +1,35 @@
+.central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+
+  &.jumbotron {
+    width: 80%;
+  }
+}
+
+body, html {
+  scroll-behavior: smooth;
+}
+
+p {
+  margin-top: 1rem;
+  text-align: justify;
+  line-height: 250%;
+  text-indent: 5%;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 5%;
+}
+
+h5 {
+  margin-top: 0.5rem;
+}
+
+.display-4 {
+  font-family: $title-font;
+}

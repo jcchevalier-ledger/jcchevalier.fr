@@ -3,6 +3,6 @@ window.addEventListener('load', function () {
 });
 
 function hide_loader() {
-    $('#loader-container').fadeOut(300);
+    $('#loader-container').fadeOut(500);
     document.body.style.overflow = 'visible';
 }

@@ -1,0 +1,44 @@
+.skills {
+  .col-1, .col, .col-2, .col-3 {
+    padding: 0;
+    height: 100%;
+  }
+
+  .row {
+    height: 75px;
+    margin: 2% auto;
+  }
+}
+
+.fab, .fas {
+  font-size: 3rem;
+
+  &:hover {
+    opacity: 70%;
+  }
+
+  &.long {
+    width: 3rem;
+    height: auto;
+  }
+
+  &.tall {
+    height: 3rem;
+    width: auto;
+  }
+}
+
+.fa-linkedin {
+  font-size: 40px;
+  color: #007bb5;
+}
+
+.fa-github-square {
+  font-size: 40px;
+  color: black;
+}
+
+.skills-title {
+  text-align: left;
+  margin: 2rem auto auto auto;
+}

@@ -1,6 +1,21 @@
-@media only screen and (max-width: 760px) {
+@media screen and (max-width: 780px) {
+  .page-header {
+    div.col-2, div.col-3 {
+      display: none;
+    }
+  }
 
-  .navbar-brand {
-    display: none;
+  #intro {
+    h1 {
+      font-size: 1.25rem !important;
+    }
+
+    p {
+      font-size: 0.75rem !important;
+    }
+  }
+
+  .jumbotron.central {
+    width: 80% !important;
   }
 }
