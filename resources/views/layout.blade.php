@@ -1,5 +1,6 @@
 <html lang="en">
 <head>
+    <!-- If you see this, the GitHub workflow is working -->
     <title>@yield('title')</title>
 
     <meta charset="utf-8">
