@@ -44,4 +44,4 @@ jobs:
           username: jisse
           host: jcchevalier.fr
           password: ${{ secrets.SSH_PASSWORD }}
-          script: 'cd /var/www/jcchevalier.fr && ./server_deploy.sh'
+          script: 'cd /var/www/jcchevalier.fr && chmod +x server_deploy.sh && ./server_deploy.sh'
