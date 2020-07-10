@@ -18,9 +18,6 @@ php artisan migrate --force
 # Clear cache
 php artisan optimize
 
-#Setup permissions for all directories
-find /var/www/jcchevalier.fr -type d -exec chmod 755 {} \;
-
 # Reload PHP to update opcache
 echo "" | sudo systemctl reload php7.4-fpm
 # Exit maintenance mode
