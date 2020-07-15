@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-3">
-                <img class="fab central long" src="{{ asset('/images/logos/C++.svg') }}"/>
+                <img class="fab central long" src="{{ asset('/images/logos/cpp.svg') }}"/>
             </div>
         </div>
 

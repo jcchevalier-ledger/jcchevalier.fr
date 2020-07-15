@@ -20,5 +20,6 @@ php artisan optimize
 
 # Reload PHP to update opcache
 echo "" | sudo systemctl reload php7.4-fpm
+
 # Exit maintenance mode
 php artisan up
