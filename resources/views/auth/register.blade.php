@@ -17,7 +17,7 @@
     <div class='background-1'>
         <div class='jumbotron central'>
 
-            <h1>Login interface</h1>
+            <h1>Register now!</h1>
             <hr>
 
             @if ($errors->any())
@@ -30,7 +30,7 @@
                 </div>
             @endif
 
-            <form name='login_form' action='{{route('login')}}' method='POST'>
+            <form name='login_form' action='{{route('register')}}' method='POST' style="margin: 1em auto 1em auto;">
 
                 @csrf
 
@@ -41,18 +41,34 @@
                 </div>
 
                 <div class='form-group'>
+                    <label for='email'></label>
+                    <input type='text' id='email' name='email'
+                           class='form-control @error("email") invalid-input @enderror'
+                           placeholder='Email address'/>
+                </div>
+
+                <div class='form-group'>
                     <label for='password'></label>
                     <input type='password' id='password' name='password'
                            class='form-control @error("password") invalid-input @enderror'
                            placeholder='Password'/>
                 </div>
 
-                <button type='submit' id='login-button' class='btn btn-success btn-lg'>Login</button>
+                <div class='form-group'>
+                    <label for='password_confirmation'></label>
+                    <input type='password' id='password_confirmation' name='password_confirmation'
+                           class='form-control @error("password") invalid-input @enderror'
+                           placeholder='Confirm password'/>
+                </div>
+
+                <button type='submit' name='submit' id='register-button' class='btn btn-success btn-lg'>
+                    Register
+                </button>
 
             </form>
 
             <p style="line-height: initial; text-indent: 0">
-                <a href="/projects/register">Create an account</a>
+                Already have an account?<br><a href="{{route('login')}}">Connect here</a>
             </p>
 
         </div>
