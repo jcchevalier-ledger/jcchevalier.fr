@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/landing_page.css": "/css/landing_page.css",
+    "/css/projects_page.css": "/css/projects_page.css",
+    "/css/login_interface.css": "/css/login_interface.css",
+    "/css/global.css": "/css/global.css",
+    "/js/landing_page.js": "/js/landing_page.js",
+    "/js/loading.js": "/js/loading.js",
+    "/js/navbar.js": "/js/navbar.js",
+    "/js/projects_page.js": "/js/projects_page.js"
+}
